@@ -17,37 +17,39 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 ## 🚀 Projets
 
 ### 1. Kirae
-- **Description :** Une brève description du projet, ce qu'il fait, et pourquoi il est intéressant.
+- **Description :** Kirae est une application mobile ayant pour but de développer et certifier les compétences de ses utilisateurs. L'application regroupe une dizaine de mini-jeux permettant d'entraîner une compétence clé chacun.
 - **Technologies utilisées :** Unity, C#
-- **Lien :** [Lien vers le dépôt GitHub ou site en ligne](https://github.com/toncompte/projet1)
+- **Lien :** [Kirae sur le Google Play Store](https://play.google.com/store/search?q=kirae&c=apps&hl=fr)
 
-### 2. [Nom du projet 2]
-- **Description :** Une courte description qui met en valeur les fonctionnalités ou les défis relevés.
-- **Technologies utilisées :** [Ex: React, Node.js, Express]
-- **Lien :** [Lien vers le dépôt GitHub ou site en ligne](https://github.com/toncompte/projet2)
+[![Kirae - L'app](./images/kirae/1.webp)](./images/kirae/1.webp)
+[![Kirae - Avec Ceci](./images/kirae/2.webp)](./images/kirae/2.webp)
+[![Kirae - Sushi Master](./images/kirae/3.webp)](./images/kirae/3.webp)
+
+### 2. Gaming Campus
+- **Description :** Plus d'une dizaine de jeux réalisés au Gaming campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo, multijoueur, IA, algorithmes complexes...
+- **Technologies utilisées :** Unity, C#
 
 [![Projet 1 - Screenshot 1](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
 [![Projet 1 - Screenshot 2](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
 [![Projet 1 - Screenshot 3](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
 
-### 3. [Nom du projet 3]
-- **Description :** Un aperçu du projet, comment tu l'as réalisé et ce que tu as appris.
-- **Technologies utilisées :** [Ex: Django, PostgreSQL]
-- **Lien :** [Lien vers le dépôt GitHub ou site en ligne](https://github.com/toncompte/projet3)
+### 3. Roblox - Block Miner Tycoon
+- **Description :** Détruisez des blocs, récupérez des ressources, améliorez vos équipements !
+- **Technologies utilisées :** Roblox Studio, Lua
+- **Lien :** **_Jeu en cours de développement_**
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="https://via.placeholder.com/150" alt="Projet 2 - Screenshot 1" width="150">
-  <img src="https://via.placeholder.com/150" alt="Projet 2 - Screenshot 2" width="150">
-  <img src="https://via.placeholder.com/150" alt="Projet 2 - Screenshot 3" width="150">
-</div>
+[![Projet 1 - Screenshot 1](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
+[![Projet 1 - Screenshot 2](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
+[![Projet 1 - Screenshot 3](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
 
+> Découvrez plus de projets parmi des sites webs, un Tic Tac Toe en Lua, un bot Discord et plus encore sur mon [GitHub](https://github.com/CorentinCouasnon) !
 ---
 
 ## 📄 Télécharger mon CV
 
 Vous pouvez télécharger mon CV en cliquant sur le lien ci-dessous :
 
-[**Télécharger mon CV**](./CV Corentin Couasnon.pdf)
+[**Télécharger mon CV**](./files/CV Corentin Couasnon.pdf)
 
 ---
 
