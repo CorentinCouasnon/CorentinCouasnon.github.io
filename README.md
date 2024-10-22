@@ -16,9 +16,9 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 ## 🚀 Projets
 
-### 1. [Nom du projet 1]
+### 1. Kirae
 - **Description :** Une brève description du projet, ce qu'il fait, et pourquoi il est intéressant.
-- **Technologies utilisées :** [Ex: HTML, CSS, JavaScript, Python]
+- **Technologies utilisées :** Unity, C#
 - **Lien :** [Lien vers le dépôt GitHub ou site en ligne](https://github.com/toncompte/projet1)
 
 ### 2. [Nom du projet 2]
@@ -26,10 +26,20 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 - **Technologies utilisées :** [Ex: React, Node.js, Express]
 - **Lien :** [Lien vers le dépôt GitHub ou site en ligne](https://github.com/toncompte/projet2)
 
+[![Projet 1 - Screenshot 1](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
+[![Projet 1 - Screenshot 2](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
+[![Projet 1 - Screenshot 3](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
+
 ### 3. [Nom du projet 3]
 - **Description :** Un aperçu du projet, comment tu l'as réalisé et ce que tu as appris.
 - **Technologies utilisées :** [Ex: Django, PostgreSQL]
 - **Lien :** [Lien vers le dépôt GitHub ou site en ligne](https://github.com/toncompte/projet3)
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://via.placeholder.com/150" alt="Projet 2 - Screenshot 1" width="150">
+  <img src="https://via.placeholder.com/150" alt="Projet 2 - Screenshot 2" width="150">
+  <img src="https://via.placeholder.com/150" alt="Projet 2 - Screenshot 3" width="150">
+</div>
 
 ---
 
