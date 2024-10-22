@@ -68,7 +68,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
     </a>
     <div style="padding: 15px;">
       <h3 style="margin: 0;">Scrabbland</h3>
-      <p style="color: #555;">Jeu roguelike autour du Scrabble. Affrontez des adversaires au Scrabble et améliorez vos pouvoirs !</p>
+      <p style="color: #555;">Jeu roguelike autour du Scrabble. Développement d'IA au comportement avancée.</p>
       <a href="https://github.com/CorentinCouasnon/Scrabbland" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur GitHub</a>
     </div>
   </div>
@@ -79,7 +79,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
     	<img src="./images/gc/multijoueur.png" alt="Multijoueur" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
     </a>
     <div style="padding: 15px;">
-      <h3 style="margin: 0;">Multijoueur</h3>
+      <h3 style="margin: 0;">FPS Microgame Multijoueur</h3>
       <p style="color: #555;">Ajouter une fonctionnalité multijoueur à un jeu de démo FPS de Unity.</p>
       <a href="https://github.com/CorentinCouasnon/MicrogameGC" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur GitHub</a>
     </div>
@@ -87,8 +87,8 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
   
     <!-- Card 3 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
-    <a href="./images/gc/snow.png" target="_blank">
-    	<img src="./images/gc/snow.png" alt="Snow sickness" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <a href="./images/gc/snow.jpg" target="_blank">
+    	<img src="./images/gc/snow.jpg" alt="Snow sickness" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
     </a>
     <div style="padding: 15px;">
       <h3 style="margin: 0;">Snow sickness</h3>
