@@ -1,12 +1,3 @@
-```{css style settings, echo = FALSE}
-blockquote {
-    padding: 10px 20px;
-    margin: 0 0 20px;
-    font-size: 10px;
-    border-left: 5px solid #eee;
-}
-```
-
 # Mon Portfolio
 
 Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi qu'une sélection de mes projets.
@@ -30,9 +21,9 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 - **Technologies utilisées :** Unity, C#
 - **Lien :** [Kirae sur le Google Play Store](https://play.google.com/store/search?q=kirae&c=apps&hl=fr)
 
-[![Kirae - L'app](./images/kirae/1.webp)](./images/kirae/1.webp)
-[![Kirae - Avec Ceci](./images/kirae/2.webp)](./images/kirae/2.webp)
-[![Kirae - Sushi Master](./images/kirae/3.webp)](./images/kirae/3.webp)
+[![Kirae - L'app](./images/kirae/1-mini.png)](./images/kirae/1.webp)
+[![Kirae - Avec Ceci](./images/kirae/1-mini.png)](./images/kirae/2.webp)
+[![Kirae - Sushi Master](./images/kirae/1-mini.png)](./images/kirae/3.webp)
 
 ### 2. Gaming Campus
 - **Description :** Plus d'une dizaine de jeux réalisés au Gaming campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo, multijoueur, IA, algorithmes complexes...
