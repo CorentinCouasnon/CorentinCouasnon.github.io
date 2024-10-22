@@ -26,7 +26,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
   <!-- Card 1 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
     <a href="./images/kirae/1.webp" target="_blank">
-    	<img src="./images/kirae/1.webp" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    	<img src="./images/kirae/1.webp" alt="Ecran des jeux" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
     </a>
     <div style="padding: 15px;">
       <h3 style="margin: 0;">Écran des jeux de l'app</h3>
@@ -36,7 +36,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
   <!-- Card 2 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
     <a href="./images/kirae/2.webp" target="_blank">
-    	<img src="./images/kirae/2.webp" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    	<img src="./images/kirae/2.webp" alt="Jeu avec ceci" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
     </a>
     <div style="padding: 15px;">
       <h3 style="margin: 0;">Jeu "Avec ceci?"</h3>
@@ -46,7 +46,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
     <!-- Card 3 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
     <a href="./images/kirae/3.webp" target="_blank">
-    	<img src="./images/kirae/3.webp" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    	<img src="./images/kirae/3.webp" alt="Jeu sushi master" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
     </a>
     <div style="padding: 15px;">
       <h3 style="margin: 0;">Jeu "Sushi master"</h3>
@@ -63,21 +63,37 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
   <!-- Card 1 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
-    <img src="https://via.placeholder.com/300x150" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <a href="./images/gc/scrabbland.png" target="_blank">
+    	<img src="./images/gc/scrabbland.png" alt="Scrabbland" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    </a>
     <div style="padding: 15px;">
-      <h3 style="margin: 0;">Nom du projet 1</h3>
-      <p style="color: #555;">Une brève description du projet. Technologies utilisées : HTML, CSS, JavaScript</p>
-      <a href="https://github.com/toncompte/projet1" style="color: #007acc; text-decoration: none;">Voir le projet</a>
+      <h3 style="margin: 0;">Scrabbland</h3>
+      <p style="color: #555;">Jeu roguelike autour du Scrabble. Affrontez des adversaires au Scrabble et améliorez vos pouvoirs !</p>
+      <a href="https://github.com/CorentinCouasnon/Scrabbland" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur GitHub</a>
     </div>
   </div>
 
   <!-- Card 2 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
-    <img src="https://via.placeholder.com/300x150" alt="Projet 2" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <a href="./images/gc/multijoueur.png" target="_blank">
+    	<img src="./images/gc/multijoueur.png" alt="Multijoueur" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    </a>
     <div style="padding: 15px;">
-      <h3 style="margin: 0;">Nom du projet 2</h3>
-      <p style="color: #555;">Description du projet. Technologies : React, Node.js</p>
-      <a href="https://github.com/toncompte/projet2" style="color: #007acc; text-decoration: none;">Voir le projet</a>
+      <h3 style="margin: 0;">Multijoueur</h3>
+      <p style="color: #555;">Ajouter une fonctionnalité multijoueur à un jeu de démo FPS de Unity.</p>
+      <a href="https://github.com/CorentinCouasnon/MicrogameGC" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur GitHub</a>
+    </div>
+  </div>
+  
+    <!-- Card 3 -->
+  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+    <a href="./images/gc/snow.png" target="_blank">
+    	<img src="./images/gc/snow.png" alt="Snow sickness" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    </a>
+    <div style="padding: 15px;">
+      <h3 style="margin: 0;">Snow sickness</h3>
+      <p style="color: #555;">Jeu multijoueur 2D de combat de boules de neige.</p>
+      <a href="https://superzero4.itch.io/snow-sickness" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur Itch</a>
     </div>
   </div>
 
