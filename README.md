@@ -25,37 +25,35 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
   <!-- Card 1 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
-    <img src="https://via.placeholder.com/300x150" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <a href="./images/kirae/1.webp" target="_blank">
+    	<img src="./images/kirae/1.webp" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    </a>
     <div style="padding: 15px;">
-      <h3 style="margin: 0;">Nom du projet 1</h3>
-      <p style="color: #555;">Une brève description du projet. Technologies utilisées : HTML, CSS, JavaScript</p>
-      <a href="https://github.com/toncompte/projet1" style="color: #007acc; text-decoration: none;">Voir le projet</a>
+      <h3 style="margin: 0;">Écran des jeux de l'app</h3>
     </div>
   </div>
 
   <!-- Card 2 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
-    <img src="https://via.placeholder.com/300x150" alt="Projet 2" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <a href="./images/kirae/2.webp" target="_blank">
+    	<img src="./images/kirae/2.webp" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    </a>
     <div style="padding: 15px;">
-      <h3 style="margin: 0;">Nom du projet 2</h3>
-      <p style="color: #555;">Description du projet. Technologies : React, Node.js</p>
-      <a href="https://github.com/toncompte/projet2" style="color: #007acc; text-decoration: none;">Voir le projet</a>
+      <h3 style="margin: 0;">Jeu "Avec ceci?"</h3>
     </div>
   </div>
   
     <!-- Card 3 -->
   <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
-    <img src="./images/kirae/3.webp" alt="Kirae - Sushi Master" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <a href="./images/kirae/3.webp" target="_blank">
+    	<img src="./images/kirae/3.webp" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    </a>
     <div style="padding: 15px;">
-      <p style="color: #555;">Jeu "Sushi Master"</p>
+      <h3 style="margin: 0;">Jeu "Sushi master"</h3>
     </div>
   </div>
 
 </div>
-
-[![Kirae - L'app](./images/kirae/1-mini.png)](./images/kirae/1.webp)
-[![Kirae - Avec Ceci](./images/kirae/2-mini.png)](./images/kirae/2.webp)
-[![Kirae - Sushi Master](./images/kirae/3-mini.png)](./images/kirae/3.webp)
 
 ### 2. Gaming Campus
 - **Description :** Plus d'une dizaine de jeux réalisés au Gaming campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo. (Multijoueur, IA, génération procédurale, etc...)
