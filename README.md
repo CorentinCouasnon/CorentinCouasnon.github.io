@@ -1,14 +1,16 @@
 # Mon Portfolio
 
-Bienvenue sur mon portfolio ! Ici, vous trouverez une présentation de moi ainsi qu'une sélection de mes projets.
+Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi qu'une sélection de mes projets.
 
 ---
 
 ## 👋 Introduction
 
-Je m'appelle **[Ton Nom]**, et je suis un(e) [Développeur(se) Web | Data Scientist | Designer | autre] passionné(e) par [tes domaines d'expertise ou centres d'intérêt].
+🎮 Je suis **Corentin Couasnon**, développeur spécialisé dans le jeu vidéo, je suis à la recherche d'un poste où je peux continuer à créer des expériences engageantes. J'ai principalement travaillé avec Unity en C#, mais j'aime explorer de nouveaux moteurs de jeu et diversifier mes compétences..
 
-Je me spécialise dans [technologies principales, ex: JavaScript, Python, React, etc.] et j'aime travailler sur des projets qui [description des types de projets ou des objectifs professionnels, ex: résolvent des problèmes complexes, améliorent l'expérience utilisateur, etc.].
+✨ Ce que j'aime particulièrement, c'est améliorer l'**expérience utilisateur** et intégrer des systèmes de jeu complexes. Participer à toutes les étapes d'un projet, de l'idée à la sortie, est ce qui me motive au quotidien.
+
+👾 En tant que joueur régulier, j'ai une bonne compréhension de ce qui rend un jeu **captivant**, et j'adore travailler avec des équipes pour créer des jeux qui marquent les esprits.
 
 ---
 
@@ -31,8 +33,17 @@ Je me spécialise dans [technologies principales, ex: JavaScript, Python, React,
 
 ---
 
+## 📄 Télécharger mon CV
+
+Vous pouvez télécharger mon CV en cliquant sur le lien ci-dessous :
+
+[**Télécharger mon CV**](./CV Corentin Couasnon.pdf)
+
+---
+
 ## 🌐 Me contacter
 
-- **GitHub :** [toncompte](https://github.com/toncompte)
-- **LinkedIn :** [Ton profil LinkedIn](https://linkedin.com/in/tonprofil)
-- **Email :** tonemail@example.com
+- **GitHub :** [CorentinCouasnon](https://github.com/CorentinCouasnon)
+- **LinkedIn :** [Corentin Couasnon](https://www.linkedin.com/in/corentin-couasnon/)
+- **Email :** ccouasno@gmail.com
+- **Téléphone :** 07 50 39 71 43
