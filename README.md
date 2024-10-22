@@ -1,3 +1,12 @@
+```{css style settings, echo = FALSE}
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 10px;
+    border-left: 5px solid #eee;
+}
+```
+
 # Mon Portfolio
 
 Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi qu'une sélection de mes projets.
@@ -42,7 +51,8 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 [![Projet 1 - Screenshot 2](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
 [![Projet 1 - Screenshot 3](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
 
-> Découvrez plus de projets parmi des sites webs, un Tic Tac Toe en Lua, un bot Discord et plus encore sur mon [GitHub](https://github.com/CorentinCouasnon) !
+> _Découvrez plus de projets parmi des sites webs, un Tic Tac Toe en Lua, un bot Discord et plus encore sur mon [GitHub](https://github.com/CorentinCouasnon) !_
+
 ---
 
 ## 📄 Télécharger mon CV
