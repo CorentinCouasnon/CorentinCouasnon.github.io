@@ -22,25 +22,41 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 - **Lien :** [Kirae sur le Google Play Store](https://play.google.com/store/search?q=kirae&c=apps&hl=fr)
 
 [![Kirae - L'app](./images/kirae/1-mini.png)](./images/kirae/1.webp)
-[![Kirae - Avec Ceci](./images/kirae/1-mini.png)](./images/kirae/2.webp)
-[![Kirae - Sushi Master](./images/kirae/1-mini.png)](./images/kirae/3.webp)
+[![Kirae - Avec Ceci](./images/kirae/2-mini.png)](./images/kirae/2.webp)
+[![Kirae - Sushi Master](./images/kirae/3-mini.png)](./images/kirae/3.webp)
 
 ### 2. Gaming Campus
 - **Description :** Plus d'une dizaine de jeux réalisés au Gaming campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo, multijoueur, IA, algorithmes complexes...
 - **Technologies utilisées :** Unity, C#
 
-[![Projet 1 - Screenshot 1](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
-[![Projet 1 - Screenshot 2](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
-[![Projet 1 - Screenshot 3](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+  <!-- Card 1 -->
+  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+    <img src="https://via.placeholder.com/300x150" alt="Projet 1" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <div style="padding: 15px;">
+      <h3 style="margin: 0;">Nom du projet 1</h3>
+      <p style="color: #555;">Une brève description du projet. Technologies utilisées : HTML, CSS, JavaScript</p>
+      <a href="https://github.com/toncompte/projet1" style="color: #007acc; text-decoration: none;">Voir le projet</a>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+    <img src="https://via.placeholder.com/300x150" alt="Projet 2" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <div style="padding: 15px;">
+      <h3 style="margin: 0;">Nom du projet 2</h3>
+      <p style="color: #555;">Description du projet. Technologies : React, Node.js</p>
+      <a href="https://github.com/toncompte/projet2" style="color: #007acc; text-decoration: none;">Voir le projet</a>
+    </div>
+  </div>
+
+</div>
 
 ### 3. Roblox - Block Miner Tycoon
 - **Description :** Détruisez des blocs, récupérez des ressources, améliorez vos équipements !
 - **Technologies utilisées :** Roblox Studio, Lua
 - **Lien :** **_Jeu en cours de développement_**
-
-[![Projet 1 - Screenshot 1](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
-[![Projet 1 - Screenshot 2](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
-[![Projet 1 - Screenshot 3](https://via.placeholder.com/150)](https://via.placeholder.com/1024)
 
 > _Découvrez plus de projets parmi des sites webs, un Tic Tac Toe en Lua, un bot Discord et plus encore sur mon [GitHub](https://github.com/CorentinCouasnon) !_
 
