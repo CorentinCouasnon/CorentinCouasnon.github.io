@@ -21,7 +21,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 ### 1. Kirae
 - **Description :** Kirae est une application mobile ayant pour but de développer et certifier les compétences de ses utilisateurs. L'application regroupe une dizaine de mini-jeux permettant d'entraîner une compétence clé chacun.
 - **Technologies utilisées :** Unity, C#
-- **Lien :** [Kirae sur le Google Play Store](https://play.google.com/store/search?q=kirae&c=apps&hl=fr)
+- **Lien :** [Vidéo de présentation de Kirae](https://www.youtube.com/watch?v=TCc27GlOGVI)
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
 
