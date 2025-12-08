@@ -1,3 +1,5 @@
+<div style="margin-bottom: 50px;"></div>
+
 # Mon Portfolio
 
 Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi qu'une sélection de mes projets.
@@ -55,7 +57,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 </div>
 
-<div style="margin-bottom: 50px;"></div>
+<div style="margin-bottom: 30px;"></div>
 
 ### 2. Gaming Campus
 - **Description :** Plus d'une dizaine de jeux réalisés au Gaming campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo. (Multijoueur, IA, génération procédurale, etc...)
@@ -101,7 +103,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 </div>
 
-<div style="margin-bottom: 50px;"></div>
+<div style="margin-bottom: 30px;"></div>
 
 ### 3. Roblox - Block Miner Tycoon
 - **Description :** Détruisez des blocs, récupérez des ressources, améliorez vos équipements !
