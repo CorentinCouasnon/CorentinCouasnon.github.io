@@ -55,6 +55,8 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 </div>
 
+<div style="margin-bottom: 50px;">
+
 ### 2. Gaming Campus
 - **Description :** Plus d'une dizaine de jeux réalisés au Gaming campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo. (Multijoueur, IA, génération procédurale, etc...)
 - **Technologies utilisées :** Unity, C#
@@ -98,6 +100,8 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
   </div>
 
 </div>
+
+<div style="margin-bottom: 50px;">
 
 ### 3. Roblox - Block Miner Tycoon
 - **Description :** Détruisez des blocs, récupérez des ressources, améliorez vos équipements !
