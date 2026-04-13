@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"/c/Dev/Soft Kids/softkidsunity/Assets/_SoftKids/Programmes/Programme\"*/)"
+    ]
+  }
+}
