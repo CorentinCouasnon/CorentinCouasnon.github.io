@@ -8,50 +8,57 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 ## 👋 Introduction
 
-🎮 Je suis **Corentin Couasnon**, développeur spécialisé dans le jeu vidéo, je suis à la recherche d'un poste où je peux continuer à créer des expériences engageantes. J'ai principalement travaillé avec Unity en C#, mais j'aime explorer de nouveaux moteurs de jeu et diversifier mes compétences..
+<div class="hero-intro">
+
+🎮 Je suis **Corentin Couasnon**, développeur spécialisé dans le jeu vidéo, je suis à la recherche d'un poste où je peux continuer à créer des expériences engageantes. J'ai principalement travaillé avec Unity en C#, mais j'aime explorer de nouveaux moteurs de jeu et diversifier mes compétences.
 
 ✨ Ce que j'aime particulièrement, c'est améliorer l'**expérience utilisateur** et intégrer des systèmes de jeu complexes. Participer à toutes les étapes d'un projet, de l'idée à la sortie, est ce qui me motive au quotidien.
 
 👾 En tant que joueur régulier, j'ai une bonne compréhension de ce qui rend un jeu **captivant**, et j'adore travailler avec des équipes pour créer des jeux qui marquent les esprits.
+
+</div>
 
 ---
 
 ## 🚀 Projets
 
 ### 1. Kirae
-- **Description :** Kirae est une application mobile ayant pour but de développer et certifier les compétences de ses utilisateurs. L'application regroupe une dizaine de mini-jeux permettant d'entraîner une compétence clé chacun.
-- **Technologies utilisées :** Unity, C#
-- **Lien :** [Vidéo de présentation de Kirae](https://www.youtube.com/watch?v=TCc27GlOGVI)
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+Kirae est une application mobile ayant pour but de développer et certifier les compétences de ses utilisateurs. L'application regroupe une dizaine de mini-jeux permettant d'entraîner une compétence clé chacun.
 
-  <!-- Card 1 -->
-  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+<div class="tech-badges">
+  <span class="tech-badge">Unity</span>
+  <span class="tech-badge">C#</span>
+</div>
+
+[▶ Vidéo de présentation de Kirae](https://www.youtube.com/watch?v=TCc27GlOGVI)
+
+<div class="cards-container">
+
+  <div class="project-card">
     <a href="./images/kirae/1.webp" target="_blank">
-    	<img src="./images/kirae/1.webp" alt="Ecran des jeux" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+      <img src="./images/kirae/1.webp" alt="Ecran des jeux">
     </a>
-    <div style="padding: 15px;">
-      <h3 style="margin: 0;">Écran des jeux de l'app</h3>
+    <div class="card-body">
+      <h3>Écran des jeux de l'app</h3>
     </div>
   </div>
 
-  <!-- Card 2 -->
-  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+  <div class="project-card">
     <a href="./images/kirae/2.webp" target="_blank">
-    	<img src="./images/kirae/2.webp" alt="Jeu avec ceci" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+      <img src="./images/kirae/2.webp" alt="Jeu avec ceci">
     </a>
-    <div style="padding: 15px;">
-      <h3 style="margin: 0;">Jeu "Avec ceci?"</h3>
+    <div class="card-body">
+      <h3>Jeu "Avec ceci?"</h3>
     </div>
   </div>
-  
-    <!-- Card 3 -->
-  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+
+  <div class="project-card">
     <a href="./images/kirae/3.webp" target="_blank">
-    	<img src="./images/kirae/3.webp" alt="Jeu sushi master" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+      <img src="./images/kirae/3.webp" alt="Jeu sushi master">
     </a>
-    <div style="padding: 15px;">
-      <h3 style="margin: 0;">Jeu "Sushi master"</h3>
+    <div class="card-body">
+      <h3>Jeu "Sushi master"</h3>
     </div>
   </div>
 
@@ -60,44 +67,46 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 <div style="margin-bottom: 30px;"></div>
 
 ### 2. Gaming Campus
-- **Description :** Plus d'une dizaine de jeux réalisés au Gaming campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo. (Multijoueur, IA, génération procédurale, etc...)
-- **Technologies utilisées :** Unity, C#
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+Plus d'une dizaine de jeux réalisés au Gaming Campus, d'une durée moyenne d'une semaine et la plupart en groupe de deux ou trois personnes. Chaque projet était porté sur un aspect du développement de jeux vidéo (multijoueur, IA, génération procédurale, etc.)
 
-  <!-- Card 1 -->
-  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+<div class="tech-badges">
+  <span class="tech-badge">Unity</span>
+  <span class="tech-badge">C#</span>
+</div>
+
+<div class="cards-container">
+
+  <div class="project-card">
     <a href="./images/gc/scrabbland.png" target="_blank">
-    	<img src="./images/gc/scrabbland.png" alt="Scrabbland" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+      <img src="./images/gc/scrabbland.png" alt="Scrabbland">
     </a>
-    <div style="padding: 15px;">
-      <h3 style="margin: 0;">Scrabbland</h3>
-      <p style="color: #555;">Jeu roguelike autour du Scrabble. Développement d'IA au comportement avancée.</p>
-      <a href="https://github.com/CorentinCouasnon/Scrabbland" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur GitHub</a>
+    <div class="card-body">
+      <h3>Scrabbland</h3>
+      <p>Jeu roguelike autour du Scrabble. Développement d'IA au comportement avancé.</p>
+      <a class="card-link" href="https://github.com/CorentinCouasnon/Scrabbland" target="_blank">Voir sur GitHub →</a>
     </div>
   </div>
 
-  <!-- Card 2 -->
-  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+  <div class="project-card">
     <a href="./images/gc/multijoueur.png" target="_blank">
-    	<img src="./images/gc/multijoueur.png" alt="Multijoueur" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+      <img src="./images/gc/multijoueur.png" alt="Multijoueur">
     </a>
-    <div style="padding: 15px;">
-      <h3 style="margin: 0;">FPS Microgame Multijoueur</h3>
-      <p style="color: #555;">Ajouter une fonctionnalité multijoueur à un jeu de démo FPS de Unity.</p>
-      <a href="https://github.com/CorentinCouasnon/MicrogameGC" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur GitHub</a>
+    <div class="card-body">
+      <h3>FPS Microgame Multijoueur</h3>
+      <p>Ajout d'une fonctionnalité multijoueur à un jeu de démo FPS de Unity.</p>
+      <a class="card-link" href="https://github.com/CorentinCouasnon/MicrogameGC" target="_blank">Voir sur GitHub →</a>
     </div>
   </div>
-  
-    <!-- Card 3 -->
-  <div style="border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);">
+
+  <div class="project-card">
     <a href="./images/gc/snow.jpg" target="_blank">
-    	<img src="./images/gc/snow.jpg" alt="Snow sickness" style="width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+      <img src="./images/gc/snow.jpg" alt="Snow sickness">
     </a>
-    <div style="padding: 15px;">
-      <h3 style="margin: 0;">Snow sickness</h3>
-      <p style="color: #555;">Jeu multijoueur 2D de combat de boules de neige.</p>
-      <a href="https://superzero4.itch.io/snow-sickness" style="color: #007acc; text-decoration: none;" target="_blank">Voir le projet sur Itch</a>
+    <div class="card-body">
+      <h3>Snow Sickness</h3>
+      <p>Jeu multijoueur 2D de combat de boules de neige.</p>
+      <a class="card-link" href="https://superzero4.itch.io/snow-sickness" target="_blank">Voir sur Itch.io →</a>
     </div>
   </div>
 
@@ -105,10 +114,16 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 <div style="margin-bottom: 30px;"></div>
 
-### 3. Roblox - Block Miner Tycoon
-- **Description :** Détruisez des blocs, récupérez des ressources, améliorez vos équipements !
-- **Technologies utilisées :** Roblox Studio, Lua
-- **Lien :** **_Jeu en cours de développement_**
+### 3. Roblox — Block Miner Tycoon
+
+Détruisez des blocs, récupérez des ressources, améliorez vos équipements !
+
+<div class="tech-badges">
+  <span class="tech-badge">Roblox Studio</span>
+  <span class="tech-badge">Lua</span>
+</div>
+
+**_Jeu en cours de développement_**
 
 > _Découvrez plus de projets parmi des sites webs, un Tic Tac Toe en Lua, un bot Discord et plus encore sur mon [GitHub](https://github.com/CorentinCouasnon) !_
 
@@ -116,9 +131,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 ## 📄 Télécharger mon CV
 
-Vous pouvez télécharger mon CV en cliquant sur le lien ci-dessous :
-
-[**Télécharger mon CV**](./files/CV Corentin Couasnon.pdf)
+<a class="btn-cv" href="./files/CV Corentin Couasnon.pdf" download>📄 Télécharger mon CV</a>
 
 ---
 
