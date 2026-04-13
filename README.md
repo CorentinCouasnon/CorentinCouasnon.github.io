@@ -1,6 +1,6 @@
 <div style="margin-bottom: 50px;"></div>
 
-# Mon Portfolio
+# Corentin COUASNON - Développeur de jeux-vidéo
 
 Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi qu'une sélection de mes projets.
 
@@ -10,11 +10,11 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 <div class="hero-intro" markdown="1">
 
-🎮 Je suis **Corentin Couasnon**, développeur spécialisé dans le jeu vidéo, je suis à la recherche d'un poste où je peux continuer à créer des expériences engageantes. J'ai principalement travaillé avec Unity en C#, mais j'aime explorer de nouveaux moteurs de jeu et diversifier mes compétences.
+🎮 Je suis **Corentin Couasnon**, développeur spécialisé dans le jeu vidéo, je suis à la recherche d'un poste où je peux continuer à créer des expériences engageantes. J'ai principalement travaillé avec Unity en C#, et c'est dans cet écosystème que je souhaite continuer à progresser et créer.
 
 ✨ Ce que j'aime particulièrement, c'est améliorer l'**expérience utilisateur** et intégrer des systèmes de jeu complexes. Participer à toutes les étapes d'un projet, de l'idée à la sortie, est ce qui me motive au quotidien.
 
-👾 En tant que joueur régulier, j'ai une bonne compréhension de ce qui rend un jeu **captivant**, et j'adore travailler avec des équipes pour créer des jeux qui marquent les esprits.
+👾 En tant que joueur régulier, j'ai une bonne compréhension de ce qui rend un jeu **captivant**, et j'adore travailler en équipe pour créer des jeux qui marquent les esprits.
 
 </div>
 
@@ -41,6 +41,7 @@ Kirae est une application mobile ayant pour but de développer et certifier les 
     </a>
     <div class="card-body">
       <h3>Écran des jeux de l'app</h3>
+      <p>Sélection parmi une dizaine de mini-jeux, chacun ciblant une compétence cognitive : mémoire, réactivité, planification...</p>
     </div>
   </div>
 
@@ -50,6 +51,7 @@ Kirae est une application mobile ayant pour but de développer et certifier les 
     </a>
     <div class="card-body">
       <h3>Jeu "Avec ceci?"</h3>
+      <p>Mémorisez les commandes des clients et servez-les correctement. Entraîne la mémoire de travail à court terme.</p>
     </div>
   </div>
 
@@ -58,7 +60,8 @@ Kirae est une application mobile ayant pour but de développer et certifier les 
       <img src="./images/kirae/3.webp" alt="Jeu sushi master">
     </a>
     <div class="card-body">
-      <h3>Jeu "Sushi master"</h3>
+      <h3>Jeu "Sushi Master"</h3>
+      <p>Attrapez les sushis, évitez les arêtes sur le tapis roulant. Entraîne la réactivité et la prise de décision rapide.</p>
     </div>
   </div>
 
@@ -74,8 +77,6 @@ Soft Kids est une application mobile éducative destinée aux enfants, déployé
   <span class="tech-badge">Unity</span>
   <span class="tech-badge">C#</span>
   <span class="tech-badge">Firebase</span>
-  <span class="tech-badge">iOS</span>
-  <span class="tech-badge">Android</span>
 </div>
 
 <div class="cards-container">
@@ -155,6 +156,43 @@ Plus d'une dizaine de jeux réalisés au Gaming Campus, d'une durée moyenne d'u
       <h3>Snow Sickness</h3>
       <p>Jeu multijoueur 2D de combat de boules de neige.</p>
       <a class="card-link" href="https://superzero4.itch.io/snow-sickness" target="_blank">Voir sur Itch.io →</a>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-bottom: 30px;"></div>
+
+### 4. Projets personnels
+
+Deux projets développés en dehors du travail, par intérêt personnel.
+
+<div class="cards-container">
+
+  <div class="project-card">
+    <a href="./images/perso/wordhippo.png" target="_blank">
+      <img src="./images/perso/wordhippo.png" alt="WordHippo">
+    </a>
+    <div class="card-body">
+      <h3>WordHippo</h3>
+      <p>Jeu de mots multijoueur en ligne inspiré du Scrabble. Grille 19×19, système de compétences, boutique de power-ups et matchmaking par niveau.</p>
+      <div class="tech-badges" style="margin-top: 10px; margin-bottom: 0;">
+        <span class="tech-badge">Firebase</span>
+        <span class="tech-badge">IA</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <a href="./images/perso/poker%20tracker.png" target="_blank">
+      <img src="./images/perso/poker%20tracker.png" alt="Poker Hand Tracker">
+    </a>
+    <div class="card-body">
+      <h3>Poker Hand Tracker</h3>
+      <p>Outil de suivi de mains de poker en direct. Saisie des actions, calcul automatique du pot et des stacks, export au format PokerStars pour analyse par IA.</p>
+      <div class="tech-badges" style="margin-top: 10px; margin-bottom: 0;">
+        <span class="tech-badge">IA</span>
+      </div>
     </div>
   </div>
 
