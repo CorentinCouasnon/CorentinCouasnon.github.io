@@ -8,7 +8,7 @@ Bienvenue sur mon portfolio ! Ici, vous trouverez une courte présentation ainsi
 
 ## 👋 Introduction
 
-<div class="hero-intro">
+<div class="hero-intro" markdown="1">
 
 🎮 Je suis **Corentin Couasnon**, développeur spécialisé dans le jeu vidéo, je suis à la recherche d'un poste où je peux continuer à créer des expériences engageantes. J'ai principalement travaillé avec Unity en C#, mais j'aime explorer de nouveaux moteurs de jeu et diversifier mes compétences.
 
@@ -129,9 +129,9 @@ Détruisez des blocs, récupérez des ressources, améliorez vos équipements !
 
 ---
 
-## 📄 Télécharger mon CV
+## 📄 CV
 
-<a class="btn-cv" href="./files/CV Corentin Couasnon.pdf" download>📄 Télécharger mon CV</a>
+<a class="btn-cv" href="./files/CV Corentin Couasnon.pdf" download>Télécharger mon CV</a>
 
 ---
 
