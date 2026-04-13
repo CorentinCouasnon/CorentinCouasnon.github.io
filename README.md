@@ -175,11 +175,11 @@ Deux projets développés en dehors du travail, par intérêt personnel.
     </a>
     <div class="card-body">
       <h3>WordHippo</h3>
-      <p>Jeu de mots multijoueur en ligne inspiré du Scrabble. Grille 19×19, système de compétences, boutique de power-ups et matchmaking par niveau.</p>
-      <div class="tech-badges" style="margin-top: 10px; margin-bottom: 0;">
+      <div class="tech-badges" style="margin-bottom: 8px;">
         <span class="tech-badge">Firebase</span>
         <span class="tech-badge">IA</span>
       </div>
+      <p>Jeu de mots multijoueur en ligne inspiré du Scrabble. Grille 19×19, système de compétences, boutique de power-ups et matchmaking par niveau.</p>
     </div>
   </div>
 
@@ -189,10 +189,10 @@ Deux projets développés en dehors du travail, par intérêt personnel.
     </a>
     <div class="card-body">
       <h3>Poker Hand Tracker</h3>
-      <p>Outil de suivi de mains de poker en direct. Saisie des actions, calcul automatique du pot et des stacks, export au format PokerStars pour analyse par IA.</p>
-      <div class="tech-badges" style="margin-top: 10px; margin-bottom: 0;">
+      <div class="tech-badges" style="margin-bottom: 8px;">
         <span class="tech-badge">IA</span>
       </div>
+      <p>Outil de suivi de mains de poker en direct. Saisie des actions, calcul automatique du pot et des stacks, avec la possibilité d'interroger une IA en temps réel pour se faire coacher et analyser ses décisions main par main.</p>
     </div>
   </div>
 
