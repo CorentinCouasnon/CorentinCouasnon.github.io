@@ -1,0 +1,123 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* ── Cards container ─────────────────────────────── */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 24px 0;
+}
+
+/* ── Project card ────────────────────────────────── */
+.project-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 122, 204, 0.25);
+  border-color: rgba(0, 122, 204, 0.5);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h3 {
+  margin: 0 0 8px 0;
+  font-size: 1em;
+}
+
+.card-body p {
+  color: #aaa;
+  font-size: 0.88em;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.card-link {
+  color: #5bb8ff;
+  text-decoration: none;
+  font-size: 0.88em;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.card-link:hover {
+  color: #90d0ff;
+  border-bottom-color: #5bb8ff;
+}
+
+/* ── Tech badges ─────────────────────────────────── */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 16px 0;
+}
+
+.tech-badge {
+  display: inline-block;
+  background: rgba(0, 122, 204, 0.15);
+  color: #5bb8ff;
+  border: 1px solid rgba(91, 184, 255, 0.3);
+  border-radius: 20px;
+  padding: 3px 11px;
+  font-size: 0.78em;
+  font-family: monospace;
+  letter-spacing: 0.03em;
+}
+
+/* ── CV download button ──────────────────────────── */
+.btn-cv {
+  display: inline-block;
+  background: #007acc;
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 0.95em;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 10px rgba(0, 122, 204, 0.4);
+}
+
+.btn-cv:hover {
+  background: #0091f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 122, 204, 0.55);
+}
+
+/* ── Section headings ────────────────────────────── */
+h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  margin-top: 40px;
+}
+
+/* ── Intro block ─────────────────────────────────── */
+.hero-intro {
+  border-left: 3px solid #007acc;
+  padding: 4px 0 4px 18px;
+  margin: 20px 0;
+}
+
+/* ── Smooth scroll ───────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
