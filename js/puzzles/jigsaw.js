@@ -69,6 +69,7 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
   };
 
   let solved = false;
+  let topZ = 10;
 
   const bgPositions = [
     '0 0', '-64px 0',
@@ -93,6 +94,9 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
       e.preventDefault();
       dragging = true;
       piece.classList.add('dragging');
+      // bring all other unplaced pieces back to baseline so the picked one is on top
+      pieceEls.forEach((el, j) => { if (j !== i && !placed[j]) el.style.zIndex = ''; });
+      piece.style.zIndex = ++topZ;
       const pt = e.touches ? e.touches[0] : e;
       offsetX = pt.clientX - positions[i].x;
       offsetY = pt.clientY - positions[i].y;
@@ -115,6 +119,7 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
         placePiece(i, t.x, t.y);
         placed[i] = true;
         piece.classList.add('placed');
+        piece.style.zIndex = '';
         targetEls[i].classList.add('placed');
         updateHint();
         if (placed.every(Boolean) && !solved) {
