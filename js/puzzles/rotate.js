@@ -32,6 +32,7 @@ export function mountRotate(container, { accent, image, onSolve }) {
     if (ok && !solved) {
       solved = true;
       hint.textContent = '✓ Image reconstituée !';
+      hint.classList.add('solved');
       setTimeout(onSolve, 350);
     } else {
       hint.textContent = `${n}/4 pièces alignées`;

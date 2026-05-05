@@ -51,6 +51,7 @@ export function mountCaptcha(container, { accent, image, onSolve }) {
       if (cleared.size === BUG_COUNT) {
         solved = true;
         hint.textContent = '✓ Aucun bug !';
+        hint.classList.add('solved');
         setTimeout(onSolve, 350);
       }
     });

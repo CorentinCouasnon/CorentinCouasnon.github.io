@@ -70,6 +70,7 @@ export function mountTaquin(container, { accent, image, onSolve }) {
       }
     });
     const placed = tiles.filter((t, i) => t === i).length;
+    hint.classList.toggle('solved', placed === TOTAL);
     hint.textContent = placed === TOTAL ? '✓ Reconstitué !' : `${placed}/${TOTAL} en place`;
   };
 

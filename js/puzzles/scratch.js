@@ -24,7 +24,6 @@ export function mountScratch(container, { accent, image, onSolve }) {
   bar.className = 'scratch-progress-bar';
   const fill = document.createElement('div');
   fill.className = 'scratch-progress-fill';
-  fill.style.background = accent;
   fill.style.width = '0%';
   bar.appendChild(fill);
   container.appendChild(bar);
@@ -83,7 +82,7 @@ export function mountScratch(container, { accent, image, onSolve }) {
     fill.style.width = `${Math.min((pct / 55) * 100, 100)}%`;
     if (pct < 10) hint.textContent = 'Gratte la surface grise';
     else if (pct < 55) hint.textContent = `${Math.round((pct / 55) * 100)}% révélé…`;
-    else hint.textContent = '✓ Révélé !';
+    else { hint.textContent = '✓ Révélé !'; hint.classList.add('solved'); }
     if (pct >= 55 && !solved) {
       solved = true;
       setTimeout(onSolve, 400);

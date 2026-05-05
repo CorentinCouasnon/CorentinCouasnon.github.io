@@ -51,6 +51,7 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
 
   const updateHint = () => {
     const n = placed.filter(Boolean).length;
+    hint.classList.toggle('solved', n === 4);
     if (n === 0) hint.textContent = 'Glisse les pièces vers le centre';
     else if (n < 4) hint.textContent = `${n}/4 pièces placées`;
     else hint.textContent = '✓ Parfait !';

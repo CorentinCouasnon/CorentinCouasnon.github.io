@@ -48,6 +48,7 @@ export function mountRgb(container, { accent, image, onSolve }) {
       solved = true;
       img.style.filter = 'none';
       hint.textContent = '✓ Couleurs corrigées !';
+      hint.classList.add('solved');
       setTimeout(onSolve, 350);
     } else {
       const off = Object.values(values).filter(v => Math.abs(v) > 10).length;

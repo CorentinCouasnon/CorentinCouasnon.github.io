@@ -42,10 +42,9 @@ export function mountPixelate(container, { accent, image, onSolve }) {
 
   const draw = () => {
     if (!imgReady) return;
-    const t = clicks / TARGET_CLICKS;
-    // pixel size shrinks from 32 → 1 along an ease curve
-    const eased = t * t;
-    const pixelSize = Math.max(1, Math.round(32 * (1 - eased)));
+    // hardcoded steps so every click visibly sharpens the image
+    const STEPS = [32, 24, 18, 13, 9, 6, 4, 2, 1];
+    const pixelSize = STEPS[Math.min(clicks, STEPS.length - 1)];
     if (pixelSize <= 1) {
       ctx.imageSmoothingEnabled = true;
       ctx.clearRect(0, 0, W, H);
@@ -73,6 +72,7 @@ export function mountPixelate(container, { accent, image, onSolve }) {
     if (clicks >= TARGET_CLICKS) {
       solved = true;
       hint.textContent = '✓ Image révélée !';
+      hint.classList.add('solved');
       setTimeout(onSolve, 300);
     } else {
       hint.textContent = 'Continue à cliquer';
