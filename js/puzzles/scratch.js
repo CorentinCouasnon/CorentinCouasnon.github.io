@@ -89,15 +89,23 @@ export function mountScratch(container, { accent, image, onSolve }) {
     }
   };
 
+  const isInside = (e) => {
+    const rect = canvas.getBoundingClientRect();
+    const pt = e.touches ? e.touches[0] : e;
+    return pt.clientX >= rect.left && pt.clientX <= rect.right
+        && pt.clientY >= rect.top  && pt.clientY <= rect.bottom;
+  };
   const start = (e) => { e.preventDefault(); drawing = true; scratchAt(e); };
-  const move = (e) => { if (drawing) { e.preventDefault(); scratchAt(e); } };
+  const moveOnWrap = (e) => { if (drawing) { e.preventDefault(); scratchAt(e); } };
+  const moveGlobal = (e) => { if (drawing && isInside(e)) scratchAt(e); };
   const end = () => { drawing = false; };
 
   wrap.addEventListener('mousedown', start);
-  wrap.addEventListener('mousemove', move);
+  wrap.addEventListener('mousemove', moveOnWrap);
+  window.addEventListener('mousemove', moveGlobal);
   window.addEventListener('mouseup', end);
-  wrap.addEventListener('mouseleave', end);
   wrap.addEventListener('touchstart', start, { passive: false });
-  wrap.addEventListener('touchmove', move, { passive: false });
-  wrap.addEventListener('touchend', end);
+  wrap.addEventListener('touchmove', moveOnWrap, { passive: false });
+  window.addEventListener('touchmove', moveGlobal, { passive: true });
+  window.addEventListener('touchend', end);
 }
