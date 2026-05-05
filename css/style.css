@@ -372,14 +372,12 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0;
+  gap: 4px;
   width: 160px; height: 160px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #f0f0f0;
 }
 .rotate-cell {
-  width: 80px; height: 80px;
+  width: 78px; height: 78px;
+  border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
   background: #f0f0f0;
@@ -388,15 +386,15 @@ a { color: inherit; }
   touch-action: manipulation;
 }
 .rotate-cell img {
-  width: 160px; height: 160px;
-  object-fit: cover;
+  width: 156px; height: 156px;
+  object-fit: fill;
   position: absolute;
   pointer-events: none;
 }
 .rotate-cell[data-pos="0"] img { top: 0; left: 0; }
-.rotate-cell[data-pos="1"] img { top: 0; left: -80px; }
-.rotate-cell[data-pos="2"] img { top: -80px; left: 0; }
-.rotate-cell[data-pos="3"] img { top: -80px; left: -80px; }
+.rotate-cell[data-pos="1"] img { top: 0; left: -78px; }
+.rotate-cell[data-pos="2"] img { top: -78px; left: 0; }
+.rotate-cell[data-pos="3"] img { top: -78px; left: -78px; }
 .rotate-cell.solved { cursor: default; }
 .rotate-cell.solved::after {
   content: '';
