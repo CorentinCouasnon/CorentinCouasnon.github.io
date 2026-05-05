@@ -32,16 +32,24 @@ export function mountTaquin(container, { accent, image, onSolve }) {
     return out;
   };
 
-  let prev = -1;
-  for (let s = 0; s < 14; s++) {
+  // Random walk of valid swaps from solved → keeps parity, always solvable.
+  // No "no-undo" filter: on a 2x2 the empty has only 2 neighbours so blocking
+  // the previous move would force a deterministic loop.
+  // On a 2x2, even-vs-odd move counts unlock different halves of the
+  // 12 solvable permutations, so randomise the parity to cover all of them.
+  const SCRAMBLE = 30 + Math.floor(Math.random() * 2);
+  for (let s = 0; s < SCRAMBLE; s++) {
     const empty = idxOfEmpty();
-    const opts = neighbors(empty).filter(n => n !== prev);
+    const opts = neighbors(empty);
     const pick = opts[Math.floor(Math.random() * opts.length)];
     [tiles[empty], tiles[pick]] = [tiles[pick], tiles[empty]];
-    prev = empty;
   }
+  // If we randomly land on the solved state, do one more swap to scramble it.
   if (tiles.every((t, i) => t === i)) {
-    [tiles[0], tiles[1]] = [tiles[1], tiles[0]];
+    const empty = idxOfEmpty();
+    const opts = neighbors(empty);
+    const pick = opts[Math.floor(Math.random() * opts.length)];
+    [tiles[empty], tiles[pick]] = [tiles[pick], tiles[empty]];
   }
 
   const tileEls = [];
