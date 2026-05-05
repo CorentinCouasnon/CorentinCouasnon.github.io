@@ -18,10 +18,21 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
     { x: -35, y: -35 }, { x: 35, y: -35 },
     { x: -35, y: 35 }, { x: 35, y: 35 },
   ];
-  const starts = [
-    { x: -28, y: -28 }, { x: 28, y: -28 },
-    { x: -28, y: 28 }, { x: 28, y: 28 },
-  ];
+  // Random scattered start positions, kept outside the central target area
+  // and far enough from each other to avoid stacking.
+  const randStart = (others) => {
+    for (let attempt = 0; attempt < 40; attempt++) {
+      const x = (Math.random() - 0.5) * 200;
+      const y = (Math.random() - 0.5) * 180;
+      if (Math.abs(x) < 60 && Math.abs(y) < 60) continue;
+      const tooClose = others.some(o => Math.hypot(o.x - x, o.y - y) < 70);
+      if (tooClose) continue;
+      return { x, y };
+    }
+    return { x: (Math.random() - 0.5) * 200, y: (Math.random() - 0.5) * 180 };
+  };
+  const starts = [];
+  for (let i = 0; i < 4; i++) starts.push(randStart(starts));
   const corners = [
     { borderTopLeftRadius: '10px' },
     { borderTopRightRadius: '10px' },
