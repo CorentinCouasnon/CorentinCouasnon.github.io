@@ -79,11 +79,11 @@ export function mountScratch(container, { accent, image, onSolve }) {
     let transparent = 0;
     for (let i = 3; i < data.length; i += 4) if (data[i] < 128) transparent++;
     const pct = Math.round((transparent / (canvas.width * canvas.height)) * 100);
-    fill.style.width = `${Math.min((pct / 55) * 100, 100)}%`;
+    fill.style.width = `${Math.min((pct / 75) * 100, 100)}%`;
     if (pct < 10) hint.textContent = 'Gratte la surface grise';
-    else if (pct < 55) hint.textContent = `${Math.round((pct / 55) * 100)}% révélé…`;
+    else if (pct < 75) hint.textContent = `${Math.round((pct / 75) * 100)}% révélé…`;
     else { hint.textContent = '✓ Révélé !'; hint.classList.add('solved'); }
-    if (pct >= 55 && !solved) {
+    if (pct >= 75 && !solved) {
       solved = true;
       setTimeout(onSolve, 400);
     }
