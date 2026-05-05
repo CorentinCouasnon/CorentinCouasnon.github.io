@@ -38,7 +38,9 @@ export function mountCaptcha(container, { accent, image, onSolve }) {
     if (buggy.has(i)) {
       const bug = document.createElement('div');
       bug.className = 'captcha-bug';
-      bug.textContent = '🐛';
+      const emoji = document.createElement('span');
+      emoji.textContent = '🐛';
+      bug.appendChild(emoji);
       cell.appendChild(bug);
     }
 
