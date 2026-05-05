@@ -48,9 +48,9 @@ a { color: inherit; }
   gap: 8px;
   font-family: 'Space Mono', monospace;
   font-size: 11px;
-  color: #bbb;
+  color: #666;
   letter-spacing: 1px;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #e0e0e0;
   padding: 8px 16px;
   border-radius: 100px;
 }
@@ -70,7 +70,8 @@ a { color: inherit; }
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #ccc;
+  color: #888;
+  font-weight: 700;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -195,7 +196,8 @@ a { color: inherit; }
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #999;
+  color: #666;
+  font-weight: 700;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -229,15 +231,16 @@ a { color: inherit; }
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #bbb;
+  color: #777;
   text-align: center;
+  font-weight: 700;
 }
 .puzzle-hint {
   font-size: 12px;
-  color: #ccc;
+  color: #555;
   text-align: center;
-  font-style: italic;
   min-height: 16px;
+  font-weight: 500;
 }
 
 @keyframes unlockFlash {
@@ -253,54 +256,47 @@ a { color: inherit; }
 .jigsaw-target {
   position: absolute;
   width: 64px; height: 64px;
-  border: 2px dashed #e0e0e0;
+  border: 2px dashed #c8c8c8;
   border-radius: 8px;
-  background: #fafafa;
+  background: #f4f4f4;
   transition: border-color 0.2s, background 0.2s;
 }
-.jigsaw-target.placed { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.jigsaw-target.placed { border-color: transparent; background: transparent; }
 .jigsaw-piece {
   position: absolute;
   width: 64px; height: 64px;
-  background: var(--accent);
-  opacity: 0.85;
+  background-size: 128px 128px;
+  background-color: var(--accent);
   cursor: grab;
   user-select: none;
   touch-action: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.18s cubic-bezier(.34,1.56,.64,1), opacity 0.18s, box-shadow 0.18s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18), 0 0 0 2px rgba(255,255,255,0.9) inset;
+  transition: transform 0.18s cubic-bezier(.34,1.56,.64,1), box-shadow 0.18s;
 }
 .jigsaw-piece:active { cursor: grabbing; }
-.jigsaw-piece.placed { opacity: 1; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.5); cursor: default; }
-.jigsaw-piece.dragging { z-index: 10; }
+.jigsaw-piece.placed { box-shadow: 0 0 0 2px var(--accent) inset; cursor: default; }
+.jigsaw-piece.dragging { z-index: 10; box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 0 2px rgba(255,255,255,0.9) inset; }
 
 /* ── PUZZLE: scratch ── */
 .scratch-area-wrap {
   position: relative;
-  width: 200px; height: 88px;
+  width: 220px; height: 130px;
   border-radius: 8px;
   overflow: hidden;
   cursor: crosshair;
   touch-action: none;
+  background: #f0f0f0;
 }
 .scratch-under {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Mono', monospace;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  background-size: cover;
+  background-position: center;
 }
 .scratch-canvas { position: absolute; inset: 0; }
 .scratch-progress-bar {
-  width: 200px; height: 4px;
-  background: #f0f0f0;
+  width: 220px; height: 4px;
+  background: #e8e8e8;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -320,8 +316,9 @@ a { color: inherit; }
 .pixelate-counter {
   font-family: 'Space Mono', monospace;
   font-size: 10px;
-  color: #aaa;
+  color: #666;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 /* ── PUZZLE: rgb ── */
@@ -401,23 +398,23 @@ a { color: inherit; }
 /* ── PUZZLE: taquin ── */
 .taquin-stage {
   display: grid;
-  grid-template-columns: repeat(3, 60px);
-  grid-template-rows: repeat(3, 60px);
-  width: 180px; height: 180px;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(2, 70px);
+  width: 210px; height: 140px;
   border-radius: 8px;
   overflow: hidden;
-  background: #eee;
+  background: #ddd;
 }
 .taquin-tile {
-  width: 60px; height: 60px;
-  background-size: 180px 180px;
+  width: 70px; height: 70px;
+  background-size: 210px 140px;
   background-color: #f0f0f0;
   cursor: pointer;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.85);
   transition: transform 0.15s;
   touch-action: manipulation;
 }
-.taquin-tile.empty { background: #eee; box-shadow: none; cursor: default; }
+.taquin-tile.empty { background: #ddd; box-shadow: none; cursor: default; }
 .taquin-tile:not(.empty):active { transform: scale(0.94); }
 
 /* ── PUZZLE: captcha ── */
@@ -504,6 +501,30 @@ a { color: inherit; }
   align-self: flex-start;
   letter-spacing: -0.2px;
 }
+
+/* ── DEBUG TOGGLE ── */
+.debug-toggle {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #888;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+  padding: 8px 14px;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+.debug-toggle:hover { opacity: 1; color: #111; border-color: #999; transform: translateY(-1px); }
+.debug-toggle:active { transform: translateY(0); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 720px) {

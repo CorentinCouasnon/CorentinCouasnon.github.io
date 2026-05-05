@@ -1,4 +1,4 @@
-export function mountScratch(container, { accent, onSolve }) {
+export function mountScratch(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
@@ -11,15 +11,13 @@ export function mountScratch(container, { accent, onSolve }) {
 
   const under = document.createElement('div');
   under.className = 'scratch-under';
-  under.textContent = 'DÉBLOQUÉ !';
-  under.style.color = accent;
-  under.style.background = `${accent}1A`;
+  under.style.backgroundImage = `url('${image}')`;
   wrap.appendChild(under);
 
   const canvas = document.createElement('canvas');
   canvas.className = 'scratch-canvas';
-  canvas.width = 200;
-  canvas.height = 88;
+  canvas.width = 220;
+  canvas.height = 130;
   wrap.appendChild(canvas);
 
   const bar = document.createElement('div');
@@ -37,27 +35,28 @@ export function mountScratch(container, { accent, onSolve }) {
   container.appendChild(hint);
 
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
-  const grad = ctx.createLinearGradient(0, 0, 200, 88);
-  grad.addColorStop(0, '#d0d0d0');
-  grad.addColorStop(1, '#b8b8b8');
+  const W = 220, H = 130;
+  const grad = ctx.createLinearGradient(0, 0, W, H);
+  grad.addColorStop(0, '#c4c4c4');
+  grad.addColorStop(1, '#9e9e9e');
   ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, 200, 88);
-  ctx.globalAlpha = 0.18;
+  ctx.fillRect(0, 0, W, H);
+  ctx.globalAlpha = 0.2;
   ctx.strokeStyle = '#fff';
-  ctx.lineWidth = 4;
-  for (let x = -100; x < 280; x += 14) {
+  ctx.lineWidth = 5;
+  for (let x = -160; x < 360; x += 16) {
     ctx.beginPath();
     ctx.moveTo(x, 0);
-    ctx.lineTo(x + 88, 88);
+    ctx.lineTo(x + H, H);
     ctx.stroke();
   }
   ctx.globalAlpha = 1;
-  ctx.fillStyle = '#888';
-  ctx.font = 'bold 11px "Space Mono", monospace';
+  ctx.fillStyle = '#555';
+  ctx.font = 'bold 13px "Space Mono", monospace';
   ctx.textAlign = 'center';
-  ctx.fillText('GRATTE ICI', 100, 42);
+  ctx.fillText('GRATTE ICI', W / 2, H / 2 - 4);
   ctx.font = '10px "Space Mono", monospace';
-  ctx.fillText('pour révéler', 100, 58);
+  ctx.fillText('pour révéler le projet', W / 2, H / 2 + 14);
 
   let drawing = false;
   let solved = false;
@@ -70,7 +69,7 @@ export function mountScratch(container, { accent, onSolve }) {
     const y = (pt.clientY - rect.top) * (canvas.height / rect.height);
     ctx.globalCompositeOperation = 'destination-out';
     ctx.beginPath();
-    ctx.arc(x, y, 18, 0, Math.PI * 2);
+    ctx.arc(x, y, 22, 0, Math.PI * 2);
     ctx.fill();
     ctx.globalCompositeOperation = 'source-over';
 

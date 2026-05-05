@@ -1,4 +1,4 @@
-export function mountJigsaw(container, { accent, onSolve }) {
+export function mountJigsaw(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
@@ -58,10 +58,17 @@ export function mountJigsaw(container, { accent, onSolve }) {
 
   let solved = false;
 
+  const bgPositions = [
+    '0 0', '-64px 0',
+    '0 -64px', '-64px -64px',
+  ];
+
   for (let i = 0; i < 4; i++) {
     const piece = document.createElement('div');
     piece.className = 'jigsaw-piece';
     Object.assign(piece.style, corners[i]);
+    piece.style.backgroundImage = `url('${image}')`;
+    piece.style.backgroundPosition = bgPositions[i];
     pieceEls.push(piece);
     stage.appendChild(piece);
     placePiece(i, starts[i].x, starts[i].y);
@@ -97,7 +104,6 @@ export function mountJigsaw(container, { accent, onSolve }) {
         placed[i] = true;
         piece.classList.add('placed');
         targetEls[i].classList.add('placed');
-        piece.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         updateHint();
         if (placed.every(Boolean) && !solved) {
           solved = true;

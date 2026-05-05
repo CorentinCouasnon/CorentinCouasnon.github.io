@@ -222,6 +222,27 @@ function init() {
     section.appendChild(grid);
     container.appendChild(section);
   }
+
+  mountDebugButton();
+}
+
+function mountDebugButton() {
+  const btn = el('button', { class: 'debug-toggle', type: 'button', title: 'Outil de test' });
+  const refresh = () => {
+    const anyUnlocked = PROJECTS.some(p => isUnlocked(p.id));
+    btn.textContent = anyUnlocked ? '🔒 Verrouiller tout' : '🔓 Débloquer tout';
+  };
+  btn.addEventListener('click', () => {
+    const anyUnlocked = PROJECTS.some(p => isUnlocked(p.id));
+    if (anyUnlocked) {
+      PROJECTS.forEach(p => localStorage.removeItem(storageKey(p.id)));
+    } else {
+      PROJECTS.forEach(p => setUnlocked(p.id));
+    }
+    location.reload();
+  });
+  refresh();
+  document.body.appendChild(btn);
 }
 
 init();

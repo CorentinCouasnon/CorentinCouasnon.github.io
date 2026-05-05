@@ -14,64 +14,63 @@ export function mountTaquin(container, { accent, image, onSolve }) {
   hint.textContent = 'Tape une tuile à côté du vide';
   container.appendChild(hint);
 
-  // 3x3 grid; 9th tile is empty. Start from solved, do a few random valid moves to scramble (always solvable).
-  const SIZE = 3;
-  let tiles = Array.from({ length: SIZE * SIZE }, (_, i) => i); // 0..7 = pieces, 8 = empty
+  // 3 cols × 2 rows = 6 cells, last is empty.
+  const COLS = 3, ROWS = 2;
+  const TOTAL = COLS * ROWS;
+  const TILE = 70;
   let solved = false;
+  let tiles = Array.from({ length: TOTAL }, (_, i) => i);
 
-  const idxOfEmpty = () => tiles.indexOf(SIZE * SIZE - 1);
+  const idxOfEmpty = () => tiles.indexOf(TOTAL - 1);
   const neighbors = (idx) => {
-    const r = Math.floor(idx / SIZE), c = idx % SIZE;
+    const r = Math.floor(idx / COLS), c = idx % COLS;
     const out = [];
-    if (r > 0) out.push(idx - SIZE);
-    if (r < SIZE - 1) out.push(idx + SIZE);
+    if (r > 0) out.push(idx - COLS);
+    if (r < ROWS - 1) out.push(idx + COLS);
     if (c > 0) out.push(idx - 1);
-    if (c < SIZE - 1) out.push(idx + 1);
+    if (c < COLS - 1) out.push(idx + 1);
     return out;
   };
 
-  // Scramble: ~12 random moves (simple, never produces solved state)
   let prev = -1;
-  for (let s = 0; s < 18; s++) {
+  for (let s = 0; s < 14; s++) {
     const empty = idxOfEmpty();
     const opts = neighbors(empty).filter(n => n !== prev);
     const pick = opts[Math.floor(Math.random() * opts.length)];
     [tiles[empty], tiles[pick]] = [tiles[pick], tiles[empty]];
     prev = empty;
   }
-  // ensure not already solved
   if (tiles.every((t, i) => t === i)) {
     [tiles[0], tiles[1]] = [tiles[1], tiles[0]];
   }
 
   const tileEls = [];
-  for (let i = 0; i < SIZE * SIZE; i++) {
+  for (let i = 0; i < TOTAL; i++) {
     const el = document.createElement('div');
     el.className = 'taquin-tile';
     stage.appendChild(el);
     tileEls.push(el);
   }
 
-  const tilePosition = (val) => {
-    // val 0..7 represents the original cell index; bg shows that part of the image
-    const r = Math.floor(val / SIZE), c = val % SIZE;
-    return `-${c * 60}px -${r * 60}px`;
+  const tileBgPosition = (val) => {
+    const r = Math.floor(val / COLS), c = val % COLS;
+    return `-${c * TILE}px -${r * TILE}px`;
   };
 
   const render = () => {
     tiles.forEach((val, slot) => {
       const el = tileEls[slot];
-      if (val === SIZE * SIZE - 1) {
+      if (val === TOTAL - 1) {
         el.className = 'taquin-tile empty';
         el.style.backgroundImage = '';
       } else {
         el.className = 'taquin-tile';
         el.style.backgroundImage = `url('${image}')`;
-        el.style.backgroundPosition = tilePosition(val);
+        el.style.backgroundPosition = tileBgPosition(val);
       }
     });
     const placed = tiles.filter((t, i) => t === i).length;
-    hint.textContent = placed === SIZE * SIZE ? '✓ Reconstitué !' : `${placed}/${SIZE * SIZE} en place`;
+    hint.textContent = placed === TOTAL ? '✓ Reconstitué !' : `${placed}/${TOTAL} en place`;
   };
 
   const click = (slot) => {
@@ -82,11 +81,10 @@ export function mountTaquin(container, { accent, image, onSolve }) {
     render();
     if (tiles.every((t, i) => t === i)) {
       solved = true;
-      // fill the empty with the last piece for a clean reveal
-      const lastSlot = tiles.length - 1;
+      const lastSlot = TOTAL - 1;
       tileEls[lastSlot].classList.remove('empty');
       tileEls[lastSlot].style.backgroundImage = `url('${image}')`;
-      tileEls[lastSlot].style.backgroundPosition = tilePosition(lastSlot);
+      tileEls[lastSlot].style.backgroundPosition = tileBgPosition(lastSlot);
       setTimeout(onSolve, 350);
     }
   };
