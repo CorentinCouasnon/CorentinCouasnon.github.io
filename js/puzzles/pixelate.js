@@ -32,9 +32,11 @@ export function mountPixelate(container, { accent, image, onSolve }) {
   ctx.fillStyle = '#e8e8e8';
   ctx.fillRect(0, 0, W, H);
 
+  const tmp = document.createElement('canvas');
+  const tctx = tmp.getContext('2d');
+
   const img = new Image();
   img.crossOrigin = 'anonymous';
-  img.src = image;
 
   let clicks = 0;
   let solved = false;
@@ -42,27 +44,35 @@ export function mountPixelate(container, { accent, image, onSolve }) {
 
   const draw = () => {
     if (!imgReady) return;
-    // hardcoded steps so every click visibly sharpens the image
-    const STEPS = [32, 24, 18, 13, 9, 6, 4, 2, 1];
-    const pixelSize = STEPS[Math.min(clicks, STEPS.length - 1)];
-    if (pixelSize <= 1) {
+    // explicit pixel grids so each click is clearly different
+    const STEPS = [4, 8, 14, 22, 32, 48, 70, 110, 0];
+    const grid = STEPS[Math.min(clicks, STEPS.length - 1)];
+    ctx.clearRect(0, 0, W, H);
+    if (grid === 0) {
       ctx.imageSmoothingEnabled = true;
-      ctx.clearRect(0, 0, W, H);
       ctx.drawImage(img, 0, 0, W, H);
-    } else {
-      const sw = Math.max(1, Math.floor(W / pixelSize));
-      const sh = Math.max(1, Math.floor(H / pixelSize));
-      ctx.imageSmoothingEnabled = false;
-      ctx.clearRect(0, 0, W, H);
-      ctx.drawImage(img, 0, 0, sw, sh);
-      ctx.drawImage(canvas, 0, 0, sw, sh, 0, 0, W, H);
+      return;
     }
+    const sw = grid;
+    const sh = Math.max(1, Math.round(grid * H / W));
+    tmp.width = sw;
+    tmp.height = sh;
+    tctx.imageSmoothingEnabled = true;
+    tctx.clearRect(0, 0, sw, sh);
+    tctx.drawImage(img, 0, 0, sw, sh);
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(tmp, 0, 0, sw, sh, 0, 0, W, H);
   };
 
   img.addEventListener('load', () => {
     imgReady = true;
     draw();
   });
+  img.src = image;
+  if (img.complete && img.naturalWidth > 0) {
+    imgReady = true;
+    draw();
+  }
 
   const handleClick = () => {
     if (solved) return;
