@@ -395,7 +395,7 @@ a { color: inherit; }
 .rotate-cell[data-pos="1"] img { top: 0; left: -78px; }
 .rotate-cell[data-pos="2"] img { top: -78px; left: 0; }
 .rotate-cell[data-pos="3"] img { top: -78px; left: -78px; }
-.rotate-cell.solved { box-shadow: inset 0 0 0 2px #22c55e; }
+.rotate-cell.solved { box-shadow: inset 0 0 0 2px #22c55e; cursor: default; }
 
 /* ── PUZZLE: taquin ── */
 .taquin-stage {

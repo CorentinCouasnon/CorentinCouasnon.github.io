@@ -50,8 +50,12 @@ export function mountRotate(container, { accent, image, onSolve }) {
     const obj = { el: cell, rot: rotations[i] };
     cell.style.transform = `rotate(${obj.rot}deg)`;
     cell.addEventListener('click', () => {
-      if (solved) return;
-      obj.rot = (obj.rot + 90) % 360;
+      // Lock the cell once it's at a correct (multiple-of-360) orientation
+      if (solved || obj.rot % 360 === 0) return;
+      // Keep an absolute (always-increasing) rotation so the CSS transition
+      // always rotates clockwise — going from 270 to 360 visually lands on 0
+      // without unwinding backwards through 180/90.
+      obj.rot += 90;
       cell.style.transform = `rotate(${obj.rot}deg)`;
       update();
     });
