@@ -380,27 +380,24 @@ a { color: inherit; }
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
-  background: #f0f0f0;
+  background-color: #f0f0f0;
+  background-size: 156px 156px;
+  background-repeat: no-repeat;
   position: relative;
   transition: transform 0.25s cubic-bezier(.4,0,.2,1);
   touch-action: manipulation;
 }
-.rotate-cell img {
-  width: 156px; height: 156px;
-  object-fit: fill;
-  position: absolute;
-  pointer-events: none;
-}
-.rotate-cell[data-pos="0"] img { top: 0; left: 0; }
-.rotate-cell[data-pos="1"] img { top: 0; left: -78px; }
-.rotate-cell[data-pos="2"] img { top: -78px; left: 0; }
-.rotate-cell[data-pos="3"] img { top: -78px; left: -78px; }
+.rotate-cell[data-pos="0"] { background-position: 0 0; }
+.rotate-cell[data-pos="1"] { background-position: -78px 0; }
+.rotate-cell[data-pos="2"] { background-position: 0 -78px; }
+.rotate-cell[data-pos="3"] { background-position: -78px -78px; }
 .rotate-cell.solved { cursor: default; }
 .rotate-cell.solved::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 2px solid #22c55e;
+  border-radius: 6px;
   pointer-events: none;
 }
 

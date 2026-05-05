@@ -43,10 +43,7 @@ export function mountRotate(container, { accent, image, onSolve }) {
     const cell = document.createElement('div');
     cell.className = 'rotate-cell';
     cell.setAttribute('data-pos', i);
-    const im = document.createElement('img');
-    im.src = image;
-    im.alt = '';
-    cell.appendChild(im);
+    cell.style.backgroundImage = `url('${image}')`;
     const obj = { el: cell, rot: rotations[i] };
     cell.style.transform = `rotate(${obj.rot}deg)`;
     cell.addEventListener('click', () => {
