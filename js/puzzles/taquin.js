@@ -15,9 +15,9 @@ export function mountTaquin(container, { accent, image, onSolve }) {
   container.appendChild(hint);
 
   // 3 cols × 2 rows = 6 cells, last is empty.
-  const COLS = 3, ROWS = 2;
+  const COLS = 2, ROWS = 2;
   const TOTAL = COLS * ROWS;
-  const TILE = 70;
+  const TILE = 90;
   let solved = false;
   let tiles = Array.from({ length: TOTAL }, (_, i) => i);
 
