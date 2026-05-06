@@ -2,7 +2,7 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
-  label.textContent = 'Reconstitue';
+  label.textContent = 'Reconstituez';
   container.appendChild(label);
 
   const stage = document.createElement('div');
@@ -11,7 +11,7 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
 
   const hint = document.createElement('div');
   hint.className = 'puzzle-hint';
-  hint.textContent = 'Glisse les pièces vers le centre';
+  hint.textContent = 'Glissez les pièces vers le centre';
   container.appendChild(hint);
 
   const targets = [
@@ -63,7 +63,7 @@ export function mountJigsaw(container, { accent, image, onSolve }) {
   const updateHint = () => {
     const n = placed.filter(Boolean).length;
     hint.classList.toggle('solved', n === 4);
-    if (n === 0) hint.textContent = 'Glisse les pièces vers le centre';
+    if (n === 0) hint.textContent = 'Glissez les pièces vers le centre';
     else if (n < 4) hint.textContent = `${n}/4 pièces placées`;
     else hint.textContent = '✓ Parfait !';
   };

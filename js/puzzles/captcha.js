@@ -2,7 +2,7 @@ export function mountCaptcha(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
-  label.textContent = 'Clique sur les bugs';
+  label.textContent = 'Cliquez sur les bugs';
   container.appendChild(label);
 
   const stage = document.createElement('div');
@@ -11,7 +11,7 @@ export function mountCaptcha(container, { accent, image, onSolve }) {
 
   const hint = document.createElement('div');
   hint.className = 'puzzle-hint';
-  hint.textContent = 'Trouve les 3 bugs';
+  hint.textContent = 'Trouvez les 3 bugs';
   container.appendChild(hint);
 
   const SIZE = 3;

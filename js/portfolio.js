@@ -20,7 +20,7 @@ const PROJECTS = [
   {
     id: 'kirae',
     name: 'Kirae',
-    category: 'Expériences pro',
+    category: 'Expériences professionnelles',
     desc: "Application mobile de développement et certification des compétences via une dizaine de mini-jeux cognitifs (mémoire, réactivité, planification).",
     tags: ['Unity', 'C#', 'Mobile'],
     links: [{ label: 'Voir la vidéo', href: 'https://www.youtube.com/watch?v=TCc27GlOGVI' }],
@@ -32,11 +32,16 @@ const PROJECTS = [
       { name: '"Avec ceci ?"', desc: "Mémorisez les commandes des clients et servez-les correctement." },
       { name: '"Sushi Master"', desc: "Attrapez les sushis, évitez les arêtes. Réactivité et décision rapide." },
     ],
+    gallery: [
+      { src: 'images/kirae/1.webp', caption: 'Kirae — Écran de sélection des mini-jeux' },
+      { src: 'images/kirae/2.webp', caption: 'Kirae — "Avec ceci ?" : mémorisation des commandes' },
+      { src: 'images/kirae/3.webp', caption: 'Kirae — "Sushi Master" : réactivité et décision rapide' },
+    ],
   },
   {
     id: 'softkids',
     name: 'Soft Kids',
-    category: 'Expériences pro',
+    category: 'Expériences professionnelles',
     desc: "Application mobile éducative iOS & Android. 8 programmes de développement socio-émotionnel pour enfants avec espace parents intégré.",
     tags: ['Unity', 'C#', 'Firebase', 'iOS', 'Android'],
     links: [],
@@ -48,11 +53,17 @@ const PROJECTS = [
       { name: 'Mini-jeu de tri', desc: "Système de swipe parmi 30+ types de jeux interactifs." },
       { name: 'Défis quotidiens', desc: "Activités guidées pour ancrer les apprentissages." },
     ],
+    gallery: [
+      { src: 'images/softkids/1.png', caption: 'Soft Kids — Accueil et programmes' },
+      { src: 'images/softkids/2.png', caption: 'Soft Kids — Espace parents' },
+      { src: 'images/softkids/3.png', caption: 'Soft Kids — Mini-jeu de tri' },
+      { src: 'images/softkids/4.png', caption: 'Soft Kids — Défis quotidiens' },
+    ],
   },
   {
     id: 'scrabbland',
     name: 'Scrabbland',
-    category: 'Gaming Campus',
+    category: 'Projets académiques',
     desc: "Jeu roguelike autour du Scrabble avec IA au comportement avancé, développé en une semaine.",
     tags: ['Unity', 'C#', 'IA', 'Roguelike'],
     links: [{ label: 'GitHub', href: 'https://github.com/CorentinCouasnon/Scrabbland' }],
@@ -63,7 +74,7 @@ const PROJECTS = [
   {
     id: 'fps',
     name: 'FPS Multijoueur',
-    category: 'Gaming Campus',
+    category: 'Projets académiques',
     desc: "Ajout d'une fonctionnalité multijoueur à un FPS de démo Unity. Synchronisation des joueurs, netcode.",
     tags: ['Unity', 'C#', 'Multijoueur'],
     links: [{ label: 'GitHub', href: 'https://github.com/CorentinCouasnon/MicrogameGC' }],
@@ -74,7 +85,7 @@ const PROJECTS = [
   {
     id: 'snow',
     name: 'Snow Sickness',
-    category: 'Gaming Campus',
+    category: 'Projets académiques',
     desc: "Jeu multijoueur 2D de combat de boules de neige, développé en équipe en une semaine.",
     tags: ['Unity', 'C#', 'Multijoueur', '2D'],
     links: [{ label: 'Itch.io', href: 'https://superzero4.itch.io/snow-sickness' }],
@@ -84,14 +95,19 @@ const PROJECTS = [
   },
   {
     id: 'wordhippo',
-    name: 'WordHippo',
+    name: 'Wordanza',
     category: 'Projets personnels',
     desc: "Jeu de mots multijoueur en ligne inspiré du Scrabble. Grille 19×19, compétences, boutique de power-ups et matchmaking.",
     tags: ['Firebase', 'IA', 'Multijoueur'],
-    links: [],
-    image: 'images/perso/wordhippo.png',
+    links: [{ label: 'wordanza.app', href: 'https://wordanza.app' }],
+    image: 'images/perso/wordanza%201.png',
     puzzle: 'taquin',
     accent: '#f59e0b',
+    gallery: [
+      { src: 'images/perso/wordanza%201.png', caption: 'Wordanza' },
+      { src: 'images/perso/wordanza%202.png', caption: 'Wordanza' },
+      { src: 'images/perso/wordanza%203.png', caption: 'Wordanza' },
+    ],
   },
   {
     id: 'poker',
@@ -106,7 +122,7 @@ const PROJECTS = [
   },
 ];
 
-const CATEGORIES = ['Expériences pro', 'Gaming Campus', 'Projets personnels'];
+const CATEGORIES = ['Expériences professionnelles', 'Projets académiques', 'Projets personnels'];
 
 const storageKey = (id) => `portfolio_unlocked_${id}`;
 const isUnlocked = (id) => localStorage.getItem(storageKey(id)) === 'true';
@@ -127,10 +143,70 @@ function el(tag, attrs = {}, children = []) {
   return node;
 }
 
+function openLightbox(project) {
+  const images = (project.gallery && project.gallery.length)
+    ? project.gallery
+    : [{ src: project.image, caption: project.name }];
+  let index = 0;
+
+  const overlay = el('div', { class: 'lightbox', role: 'dialog', 'aria-modal': 'true' });
+  const img = el('img', { class: 'lightbox-img', alt: '' });
+  const caption = el('div', { class: 'lightbox-caption' });
+  const counter = el('div', { class: 'lightbox-counter' });
+  const figure = el('figure', { class: 'lightbox-figure' }, [img, caption]);
+  const closeBtn = el('button', { class: 'lightbox-close', type: 'button', 'aria-label': 'Fermer' }, '×');
+  const prevBtn = el('button', { class: 'lightbox-nav lightbox-prev', type: 'button', 'aria-label': 'Précédent' }, '‹');
+  const nextBtn = el('button', { class: 'lightbox-nav lightbox-next', type: 'button', 'aria-label': 'Suivant' }, '›');
+
+  const update = () => {
+    const item = images[index];
+    img.src = item.src;
+    img.alt = item.caption || project.name;
+    caption.textContent = item.caption || '';
+    counter.textContent = images.length > 1 ? `${index + 1} / ${images.length}` : '';
+  };
+  const step = (delta) => { index = (index + delta + images.length) % images.length; update(); };
+  const close = () => {
+    document.removeEventListener('keydown', onKey);
+    document.body.style.overflow = '';
+    overlay.remove();
+  };
+  const onKey = (e) => {
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft' && images.length > 1) step(-1);
+    else if (e.key === 'ArrowRight' && images.length > 1) step(1);
+  };
+
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', (e) => { e.stopPropagation(); step(-1); });
+  nextBtn.addEventListener('click', (e) => { e.stopPropagation(); step(1); });
+  document.addEventListener('keydown', onKey);
+
+  overlay.appendChild(closeBtn);
+  if (images.length > 1) {
+    overlay.appendChild(prevBtn);
+    overlay.appendChild(nextBtn);
+    overlay.appendChild(counter);
+  }
+  overlay.appendChild(figure);
+
+  document.body.appendChild(overlay);
+  document.body.style.overflow = 'hidden';
+  update();
+}
+
 function buildRevealedCard(project, indexLabel) {
   const card = el('div', { class: 'card-revealed' });
 
-  card.appendChild(el('img', { class: 'project-image', src: project.image, alt: project.name, loading: 'lazy' }));
+  const cover = el('img', {
+    class: 'project-image',
+    src: project.image,
+    alt: project.name,
+    loading: 'lazy',
+    onclick: () => openLightbox(project),
+  });
+  card.appendChild(cover);
 
   const body = el('div', { class: 'project-card' });
 

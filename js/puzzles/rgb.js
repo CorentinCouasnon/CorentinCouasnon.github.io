@@ -2,7 +2,7 @@ export function mountRgb(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
-  label.textContent = 'Règle les couleurs';
+  label.textContent = 'Réglez les couleurs';
   container.appendChild(label);
 
   const wrap = document.createElement('div');
@@ -20,7 +20,7 @@ export function mountRgb(container, { accent, image, onSolve }) {
 
   const hint = document.createElement('div');
   hint.className = 'puzzle-hint';
-  hint.textContent = 'Centre les 3 sliders';
+  hint.textContent = 'Centrez les 3 sliders';
   container.appendChild(hint);
 
   // Each slider: -100 to 100, target = 0, tolerance ±10.

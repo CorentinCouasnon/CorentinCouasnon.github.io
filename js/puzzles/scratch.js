@@ -2,7 +2,7 @@ export function mountScratch(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
-  label.textContent = 'Gratte pour révéler';
+  label.textContent = 'Grattez pour révéler';
   container.appendChild(label);
 
   const wrap = document.createElement('div');
@@ -30,7 +30,7 @@ export function mountScratch(container, { accent, image, onSolve }) {
 
   const hint = document.createElement('div');
   hint.className = 'puzzle-hint';
-  hint.textContent = 'Gratte la surface grise';
+  hint.textContent = 'Grattez la surface grise';
   container.appendChild(hint);
 
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
@@ -53,7 +53,7 @@ export function mountScratch(container, { accent, image, onSolve }) {
   ctx.fillStyle = '#555';
   ctx.font = 'bold 13px "Space Mono", monospace';
   ctx.textAlign = 'center';
-  ctx.fillText('GRATTE ICI', W / 2, H / 2 - 4);
+  ctx.fillText('GRATTEZ ICI', W / 2, H / 2 - 4);
   ctx.font = '10px "Space Mono", monospace';
   ctx.fillText('pour révéler le projet', W / 2, H / 2 + 14);
 
@@ -80,7 +80,7 @@ export function mountScratch(container, { accent, image, onSolve }) {
     for (let i = 3; i < data.length; i += 4) if (data[i] < 128) transparent++;
     const pct = Math.round((transparent / (canvas.width * canvas.height)) * 100);
     fill.style.width = `${Math.min((pct / 90) * 100, 100)}%`;
-    if (pct < 10) hint.textContent = 'Gratte la surface grise';
+    if (pct < 10) hint.textContent = 'Grattez la surface grise';
     else if (pct < 90) hint.textContent = `${Math.round((pct / 90) * 100)}% révélé…`;
     else { hint.textContent = '✓ Révélé !'; hint.classList.add('solved'); }
     if (pct >= 90 && !solved) {

@@ -2,7 +2,7 @@ export function mountPixelate(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
-  label.textContent = 'Clique pour révéler';
+  label.textContent = 'Cliquez pour révéler';
   container.appendChild(label);
 
   const stage = document.createElement('div');
@@ -20,7 +20,7 @@ export function mountPixelate(container, { accent, image, onSolve }) {
 
   const hint = document.createElement('div');
   hint.className = 'puzzle-hint';
-  hint.textContent = 'Clique sur l\'image';
+  hint.textContent = 'Cliquez sur l\'image';
   container.appendChild(hint);
 
   const TARGET_CLICKS = 8;
@@ -85,7 +85,7 @@ export function mountPixelate(container, { accent, image, onSolve }) {
       hint.classList.add('solved');
       setTimeout(onSolve, 300);
     } else {
-      hint.textContent = 'Continue à cliquer';
+      hint.textContent = 'Continuez à cliquer';
     }
   };
 

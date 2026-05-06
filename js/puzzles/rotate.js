@@ -2,7 +2,7 @@ export function mountRotate(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
-  label.textContent = 'Réoriente les pièces';
+  label.textContent = 'Réorientez les pièces';
   container.appendChild(label);
 
   const stage = document.createElement('div');
@@ -11,7 +11,7 @@ export function mountRotate(container, { accent, image, onSolve }) {
 
   const hint = document.createElement('div');
   hint.className = 'puzzle-hint';
-  hint.textContent = 'Tape pour faire pivoter';
+  hint.textContent = 'Tapez pour faire pivoter';
   container.appendChild(hint);
 
   // 4 cells, each a window over the same image, with random rotation 90/180/270.
@@ -61,5 +61,5 @@ export function mountRotate(container, { accent, image, onSolve }) {
   }
 
   update();
-  hint.textContent = 'Tape pour faire pivoter';
+  hint.textContent = 'Tapez pour faire pivoter';
 }

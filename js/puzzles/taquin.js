@@ -2,7 +2,7 @@ export function mountTaquin(container, { accent, image, onSolve }) {
   container.innerHTML = '';
   const label = document.createElement('div');
   label.className = 'puzzle-label';
-  label.textContent = 'Reconstitue le taquin';
+  label.textContent = 'Reconstituez le taquin';
   container.appendChild(label);
 
   const stage = document.createElement('div');
@@ -11,7 +11,7 @@ export function mountTaquin(container, { accent, image, onSolve }) {
 
   const hint = document.createElement('div');
   hint.className = 'puzzle-hint';
-  hint.textContent = 'Tape une tuile à côté du vide';
+  hint.textContent = 'Tapez une tuile à côté du vide';
   container.appendChild(hint);
 
   // 3 cols × 2 rows = 6 cells, last is empty.
