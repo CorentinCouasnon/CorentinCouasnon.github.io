@@ -28,9 +28,9 @@ const PROJECTS = [
     puzzle: 'pixelate',
     accent: '#ff4d4d',
     subs: [
-      { name: 'Écran des jeux', desc: "Sélection parmi une dizaine de mini-jeux ciblant chacun une compétence cognitive." },
-      { name: '"Avec ceci ?"', desc: "Mémorisez les commandes des clients et servez-les correctement." },
-      { name: '"Sushi Master"', desc: "Attrapez les sushis, évitez les arêtes. Réactivité et décision rapide." },
+      { name: 'Jouer', desc: "Des sessions courtes et ludiques pensées pour un usage régulier." },
+      { name: 'Développer', desc: "Statistiques détaillées pour visualiser la progression de chaque compétence." },
+      { name: 'Certifier', desc: "Badges débloqués au fil des performances pour valoriser les compétences acquises." },
     ],
     gallery: [
       { src: 'images/kirae/1.webp', caption: 'Kirae — Écran de sélection des mini-jeux' },
@@ -50,7 +50,7 @@ const PROJECTS = [
     accent: '#ff8c00',
     subs: [
       { name: 'Espace parents', desc: "Suivi de la progression par programme et par niveau." },
-      { name: 'Mini-jeu de tri', desc: "Système de swipe parmi 30+ types de jeux interactifs." },
+      { name: 'Mini-jeux', desc: "Plus de 30 mini-jeux différents pour rendre les apprentissages variés et stimulants." },
       { name: 'Défis quotidiens', desc: "Activités guidées pour ancrer les apprentissages." },
     ],
     gallery: [
