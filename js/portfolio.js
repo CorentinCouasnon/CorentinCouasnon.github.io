@@ -1,21 +1,3 @@
-import { mountJigsaw } from './puzzles/jigsaw.js';
-import { mountScratch } from './puzzles/scratch.js';
-import { mountPixelate } from './puzzles/pixelate.js';
-import { mountRgb } from './puzzles/rgb.js';
-import { mountRotate } from './puzzles/rotate.js';
-import { mountTaquin } from './puzzles/taquin.js';
-import { mountCaptcha } from './puzzles/captcha.js';
-
-const PUZZLES = {
-  jigsaw: mountJigsaw,
-  scratch: mountScratch,
-  pixelate: mountPixelate,
-  rgb: mountRgb,
-  rotate: mountRotate,
-  taquin: mountTaquin,
-  captcha: mountCaptcha,
-};
-
 const PROJECTS = [
   {
     id: 'kirae',
@@ -25,7 +7,6 @@ const PROJECTS = [
     tags: ['Unity', 'C#'],
     links: [{ label: 'Voir la vidéo', href: 'https://www.youtube.com/watch?v=TCc27GlOGVI' }],
     image: 'images/kirae/1.webp',
-    puzzle: 'pixelate',
     accent: '#ff4d4d',
     subs: [
       { name: 'Jouer', desc: "Des sessions courtes et ludiques pensées pour un usage régulier." },
@@ -46,7 +27,6 @@ const PROJECTS = [
     tags: ['Unity', 'C#', 'Firebase'],
     links: [],
     image: 'images/softkids/2.png',
-    puzzle: 'scratch',
     accent: '#ff8c00',
     subs: [
       { name: 'Espace parents', desc: "Suivi de la progression par programme et par niveau." },
@@ -68,7 +48,6 @@ const PROJECTS = [
     tags: ['Unity', 'C#'],
     links: [{ label: 'GitHub', href: 'https://github.com/CorentinCouasnon/Scrabbland' }],
     image: 'images/gc/scrabbland.png',
-    puzzle: 'jigsaw',
     accent: '#8b5cf6',
   },
   {
@@ -79,7 +58,6 @@ const PROJECTS = [
     tags: ['Unity', 'C#'],
     links: [{ label: 'GitHub', href: 'https://github.com/CorentinCouasnon/MicrogameGC' }],
     image: 'images/gc/multijoueur.png',
-    puzzle: 'rgb',
     accent: '#0ea5e9',
   },
   {
@@ -90,7 +68,6 @@ const PROJECTS = [
     tags: ['Unity', 'C#'],
     links: [{ label: 'Itch.io', href: 'https://superzero4.itch.io/snow-sickness' }],
     image: 'images/gc/snow.jpg',
-    puzzle: 'rotate',
     accent: '#22c55e',
   },
   {
@@ -101,7 +78,6 @@ const PROJECTS = [
     tags: ['Firebase', 'IA'],
     links: [{ label: 'wordanza.app', href: 'https://wordanza.app' }],
     image: 'images/perso/wordanza%201.png',
-    puzzle: 'taquin',
     accent: '#f59e0b',
     gallery: [
       { src: 'images/perso/wordanza%201.png', caption: 'Wordanza' },
@@ -117,16 +93,11 @@ const PROJECTS = [
     tags: ['IA'],
     links: [],
     image: 'images/perso/poker%20tracker.png',
-    puzzle: 'captcha',
     accent: '#ec4899',
   },
 ];
 
 const CATEGORIES = ['Expériences professionnelles', 'Projets académiques', 'Projets personnels'];
-
-const storageKey = (id) => `portfolio_unlocked_${id}`;
-const isUnlocked = (id) => localStorage.getItem(storageKey(id)) === 'true';
-const setUnlocked = (id) => localStorage.setItem(storageKey(id), 'true');
 
 function el(tag, attrs = {}, children = []) {
   const node = document.createElement(tag);
@@ -239,47 +210,14 @@ function buildRevealedCard(project, indexLabel) {
     ));
   }
 
-  body.appendChild(el('div', { class: 'project-card-footer' }, [
-    el('div', { class: 'unlocked-badge' }, [
-      el('span', { class: 'unlocked-badge-dot' }),
-      'Débloqué',
-    ]),
-  ]));
-
   card.appendChild(body);
   return card;
 }
 
 function buildCard(project, globalIndex) {
-  const wrapper = el('div', { class: 'card-wrapper', style: `--accent:${project.accent}` });
+  const wrapper = el('div', { class: 'card-wrapper' });
   const indexLabel = String(globalIndex + 1).padStart(2, '0');
-
-  const reveal = () => {
-    wrapper.innerHTML = '';
-    wrapper.appendChild(buildRevealedCard(project, indexLabel));
-  };
-
-  if (isUnlocked(project.id)) {
-    reveal();
-    return wrapper;
-  }
-
-  // Locked: show puzzle overlay
-  const overlay = el('div', { class: 'locked-overlay', style: `--accent:${project.accent}` });
-  wrapper.appendChild(overlay);
-
-  const onSolve = () => {
-    setUnlocked(project.id);
-    overlay.classList.add('unlocking');
-    overlay.addEventListener('animationend', () => {
-      overlay.remove();
-      wrapper.appendChild(buildRevealedCard(project, indexLabel));
-    }, { once: true });
-  };
-
-  const mount = PUZZLES[project.puzzle];
-  mount(overlay, { accent: project.accent, image: project.image, onSolve });
-
+  wrapper.appendChild(buildRevealedCard(project, indexLabel));
   return wrapper;
 }
 
@@ -298,27 +236,6 @@ function init() {
     section.appendChild(grid);
     container.appendChild(section);
   }
-
-  mountDebugButton();
-}
-
-function mountDebugButton() {
-  const btn = el('button', { class: 'debug-toggle', type: 'button', title: 'Outil de test' });
-  const refresh = () => {
-    const anyUnlocked = PROJECTS.some(p => isUnlocked(p.id));
-    btn.textContent = anyUnlocked ? '🔒 Verrouiller tout' : '🔓 Débloquer tout';
-  };
-  btn.addEventListener('click', () => {
-    const anyUnlocked = PROJECTS.some(p => isUnlocked(p.id));
-    if (anyUnlocked) {
-      PROJECTS.forEach(p => localStorage.removeItem(storageKey(p.id)));
-    } else {
-      PROJECTS.forEach(p => setUnlocked(p.id));
-    }
-    location.reload();
-  });
-  refresh();
-  document.body.appendChild(btn);
 }
 
 init();
